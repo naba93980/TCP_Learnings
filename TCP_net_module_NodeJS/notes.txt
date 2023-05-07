@@ -1,0 +1,27 @@
+half closed - 
+
+In TCP (Transmission Control Protocol), a half-closed connection means that one endpoint of the connection has sent a FIN (Finish) packet to the other endpoint, indicating that it has finished sending data, but it can still receive data.
+
+After receiving the FIN packet, the other endpoint can continue to send data until it has no more data to send, at which point it sends its own FIN packet to indicate that it has finished transmitting data as well.
+
+
+At this point, both endpoints have sent a FIN packet and received an ACK (Acknowledgment) packet in response, indicating that the other endpoint has received the FIN packet. The connection is considered fully closed once both endpoints have sent and received FIN packets
+
+
+half open - 
+
+In TCP (Transmission Control Protocol), a half-open connection means that one endpoint of the connection has sent a SYN (Synchronize) packet to the other endpoint to initiate a new connection, but it has not received an ACK (Acknowledgment) packet in response.
+
+
+A connection typically begins with a three-way handshake, where one endpoint sends a SYN packet, the other endpoint responds with a SYN-ACK packet, and the first endpoint responds with an ACK packet. In a half-open connection, the handshake has started with a SYN packet, but the other endpoint has not responded with a SYN-ACK packet yet.
+
+
+A connection can remain half-open for a period of time while the first endpoint waits for a response from the other endpoint. If a response is not received within a certain amount of time, the first endpoint may retransmit the SYN packet to attempt to establish the connection again.
+
+
+A half-open connection can also occur if one endpoint has sent a FIN packet to close the connection, but it has not yet received an ACK packet in response. In this case, the connection is considered half-open until the ACK packet is received or a timeout occurs.
+
+
+half - open -> khuilla rakse, pathaise but aitasena
+half - close -> khuilla rakse shudu aito but patathaitona
+
