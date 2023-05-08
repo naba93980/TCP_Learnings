@@ -2,6 +2,8 @@ var net = require('net')
 
 var tcpServer = net.createServer();
 
+tcpServer.maxConnections=3;
+
 tcpServer.on('connection', function (socket) {
 
     console.log('a client connected to server');
