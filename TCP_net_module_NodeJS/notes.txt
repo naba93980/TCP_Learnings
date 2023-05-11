@@ -22,6 +22,7 @@ A connection can remain half-open for a period of time while the first endpoint 
 A half-open connection can also occur if one endpoint has sent a FIN packet to close the connection, but it has not yet received an ACK packet in response. In this case, the connection is considered half-open until the ACK packet is received or a timeout occurs.
 
 
-half - open -> khuilla rakse, pathaise but aitasena
-half - close -> khuilla rakse shudu aito but patathaitona
+half - open -> khuilla rakse, can write but cannot read
+half - close -> khuilla rakse can read but cannot write
 
+nc -p 6000 localhost 3000 -> custom port to client
